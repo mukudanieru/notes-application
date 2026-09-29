@@ -1,0 +1,30 @@
+# Composer
+/vendor/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# IDEs / editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# PHP
+.phpunit.result.cache
+
+# Local development
+.php-cs-fixer.cache
+
+# Temporary files
+*.tmp
+*.temp
