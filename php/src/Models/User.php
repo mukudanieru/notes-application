@@ -2,7 +2,6 @@
 
 namespace Mukudanieru\Php\Models;
 
-
 class User
 {
     public function __construct(
