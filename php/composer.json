@@ -1,22 +1,22 @@
 {
-    "name": "mukudanieru/php",
-    "description": "A basic CRUD notes application",
-    "type": "project",
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Mukudanieru\\Php\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "mukudanieru",
-            "email": "111953203+mukudanieru@users.noreply.github.com"
-        }
-    ],
-    "minimum-stability": "stable",
-    "require": {
-        "ramsey/uuid": "^4.9",
-        "vlucas/phpdotenv": "^5.7"
+  "name": "mukudanieru/php",
+  "description": "A basic CRUD notes application",
+  "type": "project",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
     }
+  },
+  "authors": [
+    {
+      "name": "mukudanieru",
+      "email": "111953203+mukudanieru@users.noreply.github.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "ramsey/uuid": "^4.9",
+    "vlucas/phpdotenv": "^5.7"
+  }
 }

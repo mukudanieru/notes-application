@@ -1,13 +1,10 @@
 <?php
 
-namespace Mukudanieru\Php\Models;
+namespace App\Models;
+
+use PDO;
 
 class User
 {
-    public function __construct(
-        public string $id,
-        public string $username,
-        public string $password_hash,
-        public string $created_at
-    ) {}
+    public function __construct(private PDO $db) {}
 }

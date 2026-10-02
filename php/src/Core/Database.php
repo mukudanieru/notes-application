@@ -1,6 +1,9 @@
 <?php
 
+namespace App\Core;
+
 use Dotenv\Dotenv;
+use PDO;
 
 $dotenv = Dotenv::createImmutable(__DIR__ . "/../../.");
 $dotenv->load();
@@ -15,6 +18,7 @@ class Database
         $dbName = "dbname={$_ENV["DB_NAME"]}";
         $charset = "charset=utf8mb4";
         $dsn = "mysql:{$dbHost};{$dbName};{$charset};";
+
         $this->pdo = new PDO($dsn, $_ENV["DB_USERNAME"], $_ENV["DB_PASSWORD"], [
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
         ]);
