@@ -9,7 +9,7 @@ class User
 {
     public function __construct(private PDO $db) {}
 
-    public function findAll(): array
+    public function findAll(): ?array
     {
         $sql = "SELECT id, username, created_at FROM users";
 
@@ -39,10 +39,10 @@ class User
         return $stmt->fetch();
     }
 
-    public function create(string $username, string $password_raw): string|false
+    public function create(string $username, string $passwordRaw): string|false
     {
         $id = Uuid::uuid4()->toString();
-        $password_hash = password_hash($password_raw, PASSWORD_DEFAULT);
+        $password_hash = password_hash($passwordRaw, PASSWORD_DEFAULT);
 
         $sql = "INSERT INTO users (id, username, password_hash) VALUES (:id, :username, :password_hash)";
 
@@ -60,13 +60,13 @@ class User
         return false;
     }
 
-    public function delete(string $id): bool
+    public function delete(string $userId): bool
     {
         $sql = "DELETE FROM users WHERE id = :id";
 
         $stmt = $this->db->prepare($sql);
         $stmt->execute([
-            "id" => $id
+            "id" => $userId
         ]);
 
         return $stmt->rowCount() > 0;
