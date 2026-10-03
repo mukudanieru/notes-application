@@ -39,7 +39,7 @@ class User
         return $stmt->fetch();
     }
 
-    public function create(string $username, string $password_raw): void
+    public function create(string $username, string $password_raw): string|false
     {
         $id = Uuid::uuid4()->toString();
         $password_hash = password_hash($password_raw, PASSWORD_DEFAULT);
@@ -47,14 +47,20 @@ class User
         $sql = "INSERT INTO users (id, username, password_hash) VALUES (:id, :username, :password_hash)";
 
         $stmt = $this->db->prepare($sql);
-        $stmt->execute([
+        $action = $stmt->execute([
             "id" => $id,
             "username" => $username,
             "password_hash" => $password_hash
         ]);
+
+        if ($action) {
+            return $id;
+        }
+
+        return false;
     }
 
-    public function delete(string $id): void
+    public function delete(string $id): bool
     {
         $sql = "DELETE FROM users WHERE id = :id";
 
@@ -62,5 +68,7 @@ class User
         $stmt->execute([
             "id" => $id
         ]);
+
+        return $stmt->rowCount() > 0;
     }
 }
