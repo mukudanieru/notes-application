@@ -42,3 +42,23 @@ $notesData = [
         "content" => "Small improvements every day can make a big difference."
     ]
 ];
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="stylesheet" href="./css/app.css">
+</head>
+
+<body class="flex justify-center items-center w-full min-h-dvh">
+    <h1 class="text-5xl font-bold h-full">
+        Hello World!
+    </h1>
+</body>
+
+</html>

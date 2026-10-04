@@ -1,6 +1,9 @@
 # Composer
 /vendor/
 
+# Node / npm
+/node_modules/
+
 # Environment / secrets
 .env
 .env.*
@@ -24,6 +27,9 @@ Thumbs.db
 
 # Local development
 .php-cs-fixer.cache
+
+# Tailwind / generated assets
+/public/css/*.css
 
 # Temporary files
 *.tmp
