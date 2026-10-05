@@ -8,10 +8,14 @@
   "license": "ISC",
   "type": "commonjs",
   "scripts": {
-    "dev:css": "tailwindcss -i ./resources/css/app.css -o ./public/css/app.css --watch"
+    "dev:css": "tailwindcss -i ./resources/css/app.css -o ./public/css/app.css --watch",
+    "build:css": "tailwindcss -i ./resources/css/app.css -o ./public/css/app.css"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.3.0",
     "tailwindcss": "^4.3.3"
+  },
+  "dependencies": {
+    "basecoat-css": "^1.0.2"
   }
 }

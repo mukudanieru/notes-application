@@ -53,12 +53,19 @@ $notesData = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notes</title>
     <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="/assets/basecoat-nova.css" />
 </head>
 
 <body class="flex justify-center items-center w-full min-h-dvh">
-    <h1 class="text-5xl font-bold h-full">
-        Hello World!
-    </h1>
+    <div class="grid items-start gap-4">
+        <div class="alert"><svg class="lucide lucide-circle-check" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <path d="m9 12 2 2 4-4" />
+            </svg>
+            <h2>Welcome!</h2>
+            <section>Basecoat is successfully installed.</section>
+        </div>
+    </div>
 </body>
 
 </html>
